@@ -27,4 +27,18 @@ class MainActivity : AppCompatActivity() {
         tvMain.text = "Labas, ${textInputName.editText?.text}!"
     }
 
+    fun onBtnChangeColorClick(view: View) {
+        val tvMain: TextView = findViewById(R.id.tvMain)
+        val randomColor = generateRandomColor()
+        tvMain.setTextColor(randomColor)
+    }
+
+    fun generateRandomColor(): Int {
+        val random = java.util.Random()
+        val red = random.nextInt(256)
+        val green = random.nextInt(256)
+        val blue = random.nextInt(256)
+
+        return android.graphics.Color.rgb(red, green, blue)
+    }
 }
