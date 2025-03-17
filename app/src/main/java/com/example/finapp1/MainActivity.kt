@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     fun onBtnChangeTextClick(view: View) {
         val tvMain: TextView = findViewById(R.id.tvMain)
         val textInputName: TextInputLayout = findViewById(R.id.textInputName)
-        tvMain.text = "Nelabas, ${textInputName.editText?.text}!"
+        tvMain.text = "Labas, ${textInputName.editText?.text}!"
     }
 
     fun onBtnChangeColorClick(view: View) {
